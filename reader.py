@@ -14,6 +14,11 @@ logger.debug('started')
 
 input_folder = './input/'
 
-terror_data = pd.read_csv('./input/train.csv', encoding='ISO-8859-1')
+# load the data into a dataframe
+input_file = input_folder + 'train.csv'
+data = pd.read_csv(input_file, encoding='ISO-8859-1')
+logger.debug('we have %s columns' % data.columns)
+print (data.describe())
 
+print (data.head())
 logger.debug('done.')
